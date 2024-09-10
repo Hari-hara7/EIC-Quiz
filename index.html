@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USN Entry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">Welcome to the EIC Test</h1>
+    <p class="fade-in delay-1">Please enter your USN to begin:</p>
+    <form id="usnForm" class="fade-in delay-2">
+      <input type="text" id="usnInput" placeholder="Enter USN" required pattern="NNM\d{7}">
+      <button type="submit">Start Test</button>
+    </form>
+    <p id="error" class="error-message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
