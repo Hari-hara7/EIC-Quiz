@@ -1,198 +1,105 @@
 /* General Styles */
-body, html {
-  font-family: 'Roboto', sans-serif;
-  background: #f7f9fc;
+body {
   margin: 0;
-  padding: 0;
+  font-family: 'Arial, sans-serif';
+  color: #333;
+}
+
+/* USN Entry Page Styles */
+.usn-page {
+  background-image: url('9161244.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-/* Container */
-.container {
-  width: 100%;
-  max-width: 600px;
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 20px;
+.usn-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
   text-align: center;
 }
 
-/* Buttons */
-.btn {
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  display: block;
-  width: 100%;
-  transition: background-color 0.3s;
+.usn-container h1 {
+  margin-bottom: 20px;
 }
 
-.btn:hover {
+.usn-container input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.usn-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.usn-container button:hover {
   background-color: #0056b3;
 }
 
-/* Form Elements */
-.form input[type="text"], .form label {
-  margin-bottom: 15px;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: block;
-}
-
-/* Quiz Feedback */
-.error-message {
-  color: red;
-  text-align: center;
-}
-
-/* Progress Bar */
-.progress-container {
-  background-color: #e9ecef;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 20px;
-}
-
-#progress-bar {
-  width: 0;
-  height: 20px;
-  background-color: #28a745;
-  transition: width 1s;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-/* Container for quiz */
+/* Quiz Page Styles */
 .quiz-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styling */
 .quiz-container h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Question styling */
 .question {
   margin-bottom: 20px;
 }
 
-.question p {
-  font-size: 1.2em;
+.question h3 {
   margin-bottom: 10px;
 }
 
-/* Answers styling */
-input[type="radio"] {
-  margin-right: 10px;
-}
-
-label {
+.question label {
   display: block;
-  font-size: 1em;
   margin-bottom: 5px;
-  cursor: pointer;
 }
 
-/* Submit button styling */
-button {
-  background-color: #007bff;
-  color: #fff;
+#quiz-form button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 30px;
   border: none;
-  padding: 10px 20px;
-  font-size: 1em;
+  background-color: #28A745;
+  color: #fff;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+#quiz-form button:hover {
+  background-color: #218838;
 }
 
-/* Result section styling */
+/* Result Page Styles */
+.result-container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.result-container h1 {
+  margin-bottom: 40px;
+}
+
 #result {
-  font-size: 1.2em;
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #eaf4e4;
-  color: #2c6b2f;
-}
-
-/* Progress bar styling */
-#progress-container {
-  width: 100%;
-  background-color: #ddd;
-  border-radius: 5px;
-  margin-top: 10px;
-  height: 20px;
-  overflow: hidden;
-}
-
-#progress-bar {
-  height: 100%;
-  background-color: #28a745;
-  width: 0;
-  transition: width 0.3s ease;
-}
-
-/* Feedback section styling */
-#feedback {
-  font-size: 1.1em;
-  margin-top: 10px;
-  color: #333;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .quiz-container {
-      padding: 15px;
-  }
-
-  .question p {
-      font-size: 1.1em;
-  }
-
-  button {
-      font-size: 0.9em;
-      padding: 8px 16px;
-  }
-
-  #result, #feedback {
-      font-size: 1em;
-  }
+  font-size: 24px;
+  font-weight: bold;
 }

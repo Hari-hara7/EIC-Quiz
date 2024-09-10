@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USN Login</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>EIC Quiz - USN Entry</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container login-container">
-        <h2>Enter Your USN to Attempt the Quiz</h2>
-        <form id="usn-form" class="form">
-            <label for="usn">USN:</label>
-            <input type="text" id="usn" name="usn" placeholder="Enter USN" required>
-            <button type="submit" class="btn">Submit</button>
-            <p id="error-message" class="error-message"></p>
-        </form>
-    </div>
-    <script src="script.js"></script>
+<body class="usn-page">
+  <div class="usn-container">
+    <h1>Welcome to the EIC Quiz</h1>
+    <form id="usn-form">
+      <input type="text" id="usn" name="usn" placeholder="Enter Your USN" required>
+      <button type="submit">Start Quiz</button>
+    </form>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
