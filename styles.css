@@ -1,60 +1,198 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .container {
-    text-align: center;
-  }
-  input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    width: 80%;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #ffcc00;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  button:hover {
-    background-color: #ffa500;
-  }
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-  }
-  .delay-1 {
-    animation-delay: 0.5s;
-  }
-  .delay-2 {
-    animation-delay: 1s;
-  }
-  .error-message {
-    color: #ff4d4d;
-  }
-  @keyframes fadeIn {
-    from {
+/* General Styles */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Form Elements */
+.form input[type="text"], .form label {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+}
+
+/* Quiz Feedback */
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+/* Progress Bar */
+.progress-container {
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+#progress-bar {
+  width: 0;
+  height: 20px;
+  background-color: #28a745;
+  transition: width 1s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
       opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+      transform: translateY(50px);
   }
-  
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Container for quiz */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.quiz-container h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Question styling */
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Answers styling */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Submit button styling */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Result section styling */
+#result {
+  font-size: 1.2em;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #eaf4e4;
+  color: #2c6b2f;
+}
+
+/* Progress bar styling */
+#progress-container {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 20px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  background-color: #28a745;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+/* Feedback section styling */
+#feedback {
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quiz-container {
+      padding: 15px;
+  }
+
+  .question p {
+      font-size: 1.1em;
+  }
+
+  button {
+      font-size: 0.9em;
+      padding: 8px 16px;
+  }
+
+  #result, #feedback {
+      font-size: 1em;
+  }
+}

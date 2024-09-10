@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Result</title>
-    <link rel="stylesheet" href="result.css">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Quiz Result</h1>
-        <div id="result"></div>
-        <div class="result-details">
-            <p>Total Questions: <span id="total-questions"></span></p>
-            <p>Correct Answers: <span id="correct-answers"></span></p>
-            <p>Score: <span id="score"></span>%</p>
+    <div class="container result-container">
+        <h2>Your Quiz Results</h2>
+        <div id="result-summary">
+            <p>You scored <span id="score"></span> out of 3!</p>
+            <p id="feedback"></p>
         </div>
-        <button type="button" id="retake-btn">Retake Quiz</button>
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <button onclick="window.location.href='index.html'" class="btn">Take Another Quiz</button>
     </div>
 
-    <script src="result.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
