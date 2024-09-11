@@ -108,7 +108,7 @@ if (document.getElementById('result')) {
   if (score !== null) {
       // Check if the score is within the top 3 and update ranks
       ranks.push(score);
-      ranks = ranks.sort((a, b) => b - a).slice(0, 3); // Keep top 3 ranks only
+      ranks = ranks.sort((a, b) => b - a).slice(0,4 ); // Keep top 3 ranks only
       localStorage.setItem('quizRanks', JSON.stringify(ranks));
 
       // Determine rank
