@@ -2,18 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EIC Quiz - USN Entry</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="usn-page">
   <div class="usn-container">
     <h1>Welcome to the EIC Quiz</h1>
-    <form id="usn-form">
-      <input type="text" id="usn" name="usn" placeholder="Enter Your USN" required>
-      <button type="submit">Start Quiz</button>
+    <p>Please enter your USN to start the quiz.</p>
+
+    <!-- USN Entry Form -->
+    <form id="usn-form" class="usn-form">
+      <input type="text" id="usn" name="usn" class="usn-input" placeholder="Enter Your USN" required pattern="[0-9a-zA-Z]{10}" title="USN must be 10 characters (letters and numbers)">
+      <button type="submit" class="usn-button">Start Quiz</button>
     </form>
+
+    <!-- Error message for invalid USN -->
+    <p id="usn-error" class="error-message" style="display: none;">Please enter a valid USN.</p>
   </div>
 
+  <!-- JavaScript -->
   <script src="scripts.js"></script>
 </body>
 </html>
