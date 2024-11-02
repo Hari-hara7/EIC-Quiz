@@ -1,6 +1,6 @@
 # EIC Quiz - USN Entry
 
-![EIC Quiz Banner](https://example.com/path/to/your/image.jpg) <!-- Replace with your image URL -->
+![EIC Quiz Banner](Screenshot 2024-11-03 003319.png) <!-- Replace with your image URL -->
 
 Welcome to the **EIC Quiz** application! This web application allows users to enter their University Serial Number (USN) to start the quiz. The USN input is validated to ensure that it meets the required format.
 
